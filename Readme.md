@@ -17,7 +17,7 @@
 
 #### Quick Look Of how website looks:
 
-![img](./QuickLook/Untitled.png)
+![img](./QuickLook/sec-1.png)
 
 ![img](./QuickLook/sec-2.png)
 
