@@ -13,7 +13,7 @@
 
 ### Time spent: 6 hours
 
-### [Live Website]()
+### [Live Website](https://developer-landingpage-vivekn.netlify.app/)
 
 #### Quick Look Of how website looks:
 
