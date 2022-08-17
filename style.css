@@ -17,17 +17,37 @@ header{
 nav{
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
 }
 .nav-item{
-  margin-top: 2rem;
   color: #ffffff;
   font-size: 14px;
   cursor: pointer;
 }
-nav svg{
+.nav-right{
   margin-right: 3rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.menu{
+  font-size: 14px;
+  margin-left: 2rem;
+  display: none;
+}
+.menu-link{
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+.menu-link li{
+  font-size: 16px;
+  font-weight:500;
+}
+nav svg{
+  /* margin-right: 3rem; */
   transform: scale(1.4);
   height: 26px;
 }
@@ -41,7 +61,7 @@ nav svg{
 
 .header-image{
   position: absolute;
-  width: 36rem;
+  width:min(35rem,40vw);
   top: 6rem;
   right: 0px;
 }
@@ -55,14 +75,14 @@ nav svg{
   color: #ffffff;
 }
 .header-text h2{
-  font-size: 40px;
+  font-size: max(28px,3vw);
   font-weight: 500;
 }
 .header-text p{
   margin-top: 1rem;
-  font-size: px20;
+  font-size:min(18px,2vw);
   font-weight:100;
-  padding-bottom: 7rem;
+  padding-bottom: 7vw;
 }
 
 .companies{
@@ -70,18 +90,18 @@ nav svg{
   margin-top: 1.5rem;
 }
 .company-items{
-  margin-right: 2rem;
+  margin-right: 1rem;
   color: #1d1d1d;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: max(18px,2vw);
   font-family: 'Righteous', sans-serif;
 }
 .api{
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-left: 3rem;
 }
 .api-heading{
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   font-weight:900;
   font-size: 34px;
 }
@@ -89,7 +109,9 @@ nav svg{
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap:22px;
+  flex-wrap: wrap;
 }
 .card-active{
   background-color: #ffffff;
@@ -110,6 +132,9 @@ nav svg{
 .card{
   padding: 40px 20px;
 }
+.card, .card-active{
+  width: 180px;
+}
 
 .card p{
   font-size: 14px;
@@ -127,57 +152,54 @@ nav svg{
   padding: 3px 7px ;
   border-radius: 12px;
 }
-.blog-heading h1{
-  margin-top: 3rem;
-  margin-left: 3rem;
-  font-size: 40px;
-  font-weight: 800;
-}
-.blog-card{
-  margin-left:5rem;
-  margin-top: 2rem;
-}
-.blog-card{
-  height: 288px;
-  width: 40%;
-  background-color: white;
-  border-radius: 70px 10px 10px 10px;
-  box-shadow: #00000059 0px 5px 15px;
-  margin-right: 50px;
-}
-.blog-content{
-  float:right;
-  margin-right: 50px;
-  margin-top: 20px;
-}
-.blog-content h6{
-  color: #4516FE;
-  font-size: 12px;
-}
-.blog-content h3{
-  font-weight: 900;
-}
-.blog-image{
-  float: left;
-}
-.blog-author{
-  font-size: 12px;
-  float: right;
-  margin-top: 30px;
-  margin-right: 10px;
-  font-weight: 800;
-}
-.blog-card-bottom-image{
-  margin-top: 64px;
-  float: right;
-  margin-right: 70px;
-}
 
+/* BLOG */
+.blog-heading{
+  margin-block: 3rem 1rem;
+  margin-left: 3rem;
+}
 .blog-cards{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:4rem;
+  flex-wrap: wrap;
+}
+.blog-card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow:#706b6b29 0px 10px 15px;
+  border-radius: 50px 10px 10px 10px;
+  width:500px;
+  height: 300px;
 }
 
+.blog-right{
+  padding-right:2rem ;
+  padding-left:2rem ;
+}
+.blog-content h6{
+  color: #4516FE;
+  margin-top: 20px;
+}
+.blog-content h3{
+  font-size: 18px;
+  font-weight: 800;
+  margin-block:.7rem ;
+}
+.blog-author{
+  font-size: 14px;
+  font-weight: 900;
+  display: flex;
+  float: right;
+  margin-top: -24px;
+}
+.blog-bottom{
+  margin-top: 10px;
+}
 .faq-section{
   display: flex;
   flex-direction: row;
@@ -189,8 +211,6 @@ nav svg{
   margin-left:8rem ;
   margin-top: 2rem;
 }
-
-
 .faq-content h2{
   font-size: 40px;
   line-height: 1.2;
@@ -241,6 +261,9 @@ nav svg{
   background-color: transparent;
   border-color: transparent;
 }
+.download-email form{
+  text-align: center;
+}
 .download-email button{
   background-color: #4516FE;
   border-color: transparent;
@@ -266,6 +289,7 @@ nav svg{
   color: #ffffff;
   margin-top: 2rem;
 }
+
 .footer-right img{
   margin-left: 1rem;
 }
@@ -279,4 +303,99 @@ nav svg{
   gap: 2rem;
   color: #ffffff;
   margin-top: 2rem;
+}
+
+@media (max-width:900px){
+  .header-image{
+    display: none;
+  }
+  .menu{
+    display: block;
+    cursor: pointer;
+  }
+  .logo{
+    width: 100px;
+  }
+  .menu-link{
+    position: absolute;
+    top: 90px;
+    height: 38vh;
+    width: 100%;
+    left: 0%;
+    display:none;
+    text-align: center;
+    background-color: #4516FE; 
+  } 
+  .nav-active{
+    display: block;
+  }
+  .menu-link li{
+    padding-block: 10px;
+    transition: 300ms ease-in-out;
+  }
+  .menu-link li:hover{
+    background-color: #d4dcfc75;
+  }
+  .header-text{
+    margin-left: 0px;
+    text-align: center;
+  }
+  .companies{
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width:500px) {
+  .card,.card-active{
+    width: 250px;
+    text-align: center;
+  }
+  .fa-angle-right{
+    display: none;
+  }
+  .blog-right{
+    padding-right:1rem ;
+    padding-left:1rem ;
+  }
+  .blog-content small{
+    font-size: 12px;
+  }
+  .blog-content h3{
+    margin-block: 0rem;
+  }
+}
+@media (max-width:1056px){
+  .faq-section{
+    justify-content: center;
+    text-align: center;
+  }
+  .faq-content{
+    margin-left:0px ;
+    padding-bottom: 20px;
+  }
+  .faq-image{
+    display: none;
+  }
+  .download-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .download-email{
+    margin: 0px;
+  }
+  .download-content h1{
+    margin: 0px;
+  }
+}
+@media (max-width:700px){
+  .footer-section{
+    padding-inline: 4rem;
+    align-items: flex-start;
+  }
+  .list{
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 }
